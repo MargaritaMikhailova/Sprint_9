@@ -7,7 +7,7 @@ services:
       - "./selenoid_config:/etc/selenoid"
       - "/var/run/docker.sock:/var/run/docker.sock"
     environment:
-      DOCKER_API_VERSION: "1.44"
+      DOCKER_API_VERSION: "1.52"
     command: ["-conf", "/etc/selenoid/browser.json", "-container-network", "selenoid"]
     networks:
       - selenoid
