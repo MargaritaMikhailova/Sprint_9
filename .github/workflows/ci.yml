@@ -18,7 +18,18 @@ jobs:
           docker pull selenoid/chrome:128.0
 
       - name: Run tests in docker
-        run: docker compose up --build --abort-on-container-exit --exit-code-from test test
+        run: |
+          docker compose up -d --build selenoid
+          echo "Waiting for Selenoid..."
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:4444/status > /dev/null; then
+              echo "Selenoid is ready"
+              break
+            fi
+            sleep 2
+          done
+          curl -sf http://localhost:4444/status
+          docker compose up --no-deps --build --abort-on-container-exit --exit-code-from test test
 
       - name: Stop containers
         if: always()
