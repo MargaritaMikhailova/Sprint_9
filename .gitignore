@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Testing & Allure
+.pytest_cache/
+.coverage
+.tox/
+target/
+allure_result/
+allure_result/
+allure_result/
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+.DS_Store/
+Thumbs.dballure-results/
+__pycache__/
