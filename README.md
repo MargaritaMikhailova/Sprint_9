@@ -1,4 +1,4 @@
-# Ызкште_9 - Тестирование UI для Продуктового помощника
+# Sprint_9 - Тестирование UI для Продуктового помощника
 
 Автотесты для UI https://foodgram-frontend-1.foodgram.education-services.ru/
 
